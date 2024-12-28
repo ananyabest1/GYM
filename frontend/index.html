@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Registration with Monthly Payment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gym Registration System</h1>
+
+    <form id="registrationForm">
+      <!-- Personal Details -->
+      <h2>Personal Details</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <!-- Batch Selection -->
+      <h2>Select Batch</h2>
+      <label for="batch">Choose a batch:</label>
+      <select id="batch" name="batch" required>
+        <option value="" disabled selected>Select a batch</option>
+      </select>
+
+      <p id="batchWarning" class="warning"></p>
+
+      <!-- Payment Section -->
+      <h2>Payment</h2>
+      <p>Monthly Fee: <strong>$50</strong></p>
+      <button type="button" id="payNow">Pay Now</button>
+      <p id="paymentStatus" class="success"></p>
+
+      <button type="submit" id="registerButton" disabled>Register</button>
+    </form>
+
+    <!-- Bonus Section -->
+    <div id="bonusFeatures">
+      <h2>Admin Features (Bonus)</h2>
+      <button id="viewUnpaid">View Unpaid Fees</button>
+      <button id="calculateDues">Calculate Outstanding Dues</button>
+      <p id="bonusOutput"></p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
